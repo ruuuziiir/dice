@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         totalGame.text = "0"
         leftWin.text = ""
         rightWin.text = ""
+        status.text = ""
     }
     
     var leftSum = 0
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
         }
         for imageView in rightDice {
             let number = Int.random(in: 1...6)
-            imageView.image = UIImage(systemName: "die.face.\(number)")
+            imageView.image = UIImage(systemName: "die.face.\(number).fill")
             
             rightSum = rightSum + number
 
@@ -79,9 +80,11 @@ class ViewController: UIViewController {
         leftWin.text = ""
         rightWin.text = ""
         total = 0
+        leftBig = 0
+        rightBig = 0
         
         for imageView in rightDice {
-            imageView.image = UIImage(systemName: "die.face.1")
+            imageView.image = UIImage(systemName: "die.face.1.fill")
         }
         for imageView in leftDice {
             imageView.image = UIImage(systemName: "die.face.1")
